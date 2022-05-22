@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../final.css">
+    <title>Portfolio Enzo Daval</title>
+</head>
+<body>
+    <div class="flex justify-center">
+    <nav class="fixed items-center justify-between flex-wrap py-2 bg-white my-2 px-5 text-black rounded-3xl shadow-md">
+              <a class="mx-2" href="#">A propos de moi</a>
+              <a class="mx-2" href="#competences">Compétences</a>
+              <a class="mx-2" href="#">CV</a>
+              <a class="mx-2" href="#">Atelier de professionnalisation (E5)</a>
+              <a class="mx-2" href="#">E4</a>
+    </nav>
+    </div>
+
+    <div class="flex mt-5">
+        <div class="rounded-t-lg container ml-96 mr-12 my-20 bg-amber-200 border animationProfil w-96 border-slate-200 shadow-md pt-2">
+            <img class="mx-auto px-3 py-4 rounded-full" src="https://static.wixstatic.com/media/41d186_578b320d0ddd47d7bf382002b1beb2a0~mv2.jpg/v1/crop/x_0,y_40,w_1338,h_1338/fill/w_206,h_205,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Photo%2520CV_edited.jpg" alt="">
+            <p class="text-center font-bold text-xl">Enzo<br> Daval</p>
+            <hr class="h-0.5 w-14 my-6 mx-auto border-0 bg-blue-600">
+            <p class="text-center text-xl tracking-widest font-light ">INTEGRATEUR WEB<br> JUNIOR</p>
+            <div class="bg-white h-12 mt-10">
+                <img class=" ml-36 pt-1 inline-block" src="https://static.wixstatic.com/media/6ea5b4a88f0b4f91945b40499aa0af00.png/v1/fill/w_25,h_25,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/6ea5b4a88f0b4f91945b40499aa0af00.png" alt="LinkedIn" style="width:25px;">
+                <img class="ml-1 pt-1 inline-block" src="https://abgis.tech/wp-content/uploads/2021/12/20.png" alt="LinkedIn" style="width:75px;">
+            </div>
+        </div>
+            <div>
+                <p class="flex-1 mt-24 font-bold text-white text-8xl bienvenue">Bienvenue</p>
+                <p class="mt-5 mx-2 text-white text-2xl portfolio"> Sur mon portfolio</p>
+                <div class="bg-blue-400 my-6 w-96 border rounded-lg">
+                    <p class="p-3 text-lg description">Je m'appelle Enzo Daval, j'ai 20 ans et je suis un étudiant en seconde année de BTS SIO option SLAM à l'école IPSSI Saint-Quentin-en-Yvelines</p>
+                </div>
+            </div>
+    </div>
+
+
+    <section id="section10" class="demo">
+        <a id="scroll" href="#competences"><span></span>Compétences</a>
+      </section>
+
+      <p id="competences" class="my-72">test</p>
+      
+</body>
+
+<script>
+
+$(function() {
+    $('a[href*=#]').on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+    });
+  });
+
+  </script>
+</html>

@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes apparitionSlide {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .animationProfil {
+    animation: 0.5s
+    ease-out 0s 1 
+    apparitionSlide
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: black;
+  }
+  
+  nav {
+    z-index: 1;
+  }
+  
+  body:before {
+    content: '';
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://i0.wp.com/omatsuri.blog/wp-content/uploads/2022/02/alexandru-acea-XEB8y0nRRP4-unsplash-scaled.jpg?fit=2560%2C1707&ssl=1');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -9;
+    opacity: 0.8;
+  }
+  
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+  
+  .bienvenue {
+    width: 100%;
+    animation: typing 2s steps(9), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+  }
+  
+  
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  .portfolio {
+    opacity: 0;
+    animation: fadeIn ease 3s 2s;
+    animation-fill-mode: forwards;
+  }
+  
+  .description {
+    font-family: sans-serif;
+  }
+  
+  .bg-blue-400 {
+    opacity: 0;
+    animation: fadeIn ease 3s 3.5s;
+    animation-fill-mode: forwards;
+  }
+  
+  a {
+    display: inline-block;
+    position: relative;
+  }
+  nav a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: red;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+  
+  
+  #section10 a {
+    padding-top: 60px;
+  }
+  #section10 a span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 30px;
+    height: 50px;
+    margin-left: -15px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    box-sizing: border-box;
+  }
+  
+  .demo a {
+    position: absolute;
+    bottom: 20px;
+    left: 45%;
+    z-index: 2;
+    display: inline-block;
+    transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #fff;
+    font : normal 400 20px/1 'Josefin Sans', sans-serif;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+  }
+  .demo a:hover {
+    opacity: .5;
+  }
+  
+  #section10 a span::before {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: '';
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: #fff;
+    border-radius: 100%;
+    animation: sdb10 2s infinite;
+    animation: sdb10 2s infinite;
+    box-sizing: border-box;
+  }
+  
+  @keyframes sdb10 {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      transform: translate(0, 20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .flex {
+      flex-direction: column;
+      justify-content:left;
+    }
+  
+    .bienvenue {
+      width: 20rem;
+    }
+  
+    .bg-blue-400 {
+      margin-left: 3%;
+    }
+  
+    .flex-wrap {
+      position:relative;
+    }
+  
+    .animationProfil {
+      margin-left: 0vw;
+      margin: auto;
+      width: 100vw;
+    }
+  
+    .text-8xl {
+      font-size: 4rem;
+      margin-top: 10%;
+    }
+  }
